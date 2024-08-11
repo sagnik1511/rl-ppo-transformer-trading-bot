@@ -335,11 +335,7 @@ class TradingEnvironmentwithBlotter:
         print(
             f'Total portfolio value: {self.portfolio["cash"] + self.portfolio["holdings"][row["symbol"]]*row["Close"]}'
         )
-        # get trades in a pandas dataframe
-        trades_df = pd.DataFrame(self.trades)
-        # Save a csv
-        trades_df.to_csv("trades_blotter.csv", index=False)
-        for trade in self.trades:
-            print(
-                f"Step: {trade['step']}, Timestamp: {trade['timestamp']}, Action: {trade['action']}, Price: {trade['price']}, Shares: {trade['shares']}, Symbol: {trade['symbol']}, Reward: {trade['reward']}, Transaction Cost: {trade['transaction_cost']}, Slippage: {trade['slippage']}, Time Penalty: {trade['time_penalty']}"
-            )
+        # for trade in self.trades:
+        #     print(
+        #         f"Step: {trade['step']}, Timestamp: {trade['timestamp']}, Action: {trade['action']}, Price: {trade['price']}, Shares: {trade['shares']}, Symbol: {trade['symbol']}, Reward: {trade['reward']}, Transaction Cost: {trade['transaction_cost']}, Slippage: {trade['slippage']}, Time Penalty: {trade['time_penalty']}"
+        #     )
